@@ -1,5 +1,5 @@
 class MyApp < Sinatra::Base
   get '/' do
-    'Hello world!'
+    slim :main
   end
 end
