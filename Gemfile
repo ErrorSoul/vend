@@ -5,3 +5,5 @@ gem 'sinatra'
 gem 'slim'
 
 gem 'pry'
+
+gem 'actionmailer'

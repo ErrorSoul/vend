@@ -64,7 +64,7 @@ jQuery.validator.setDefaults({
   },
   submitHandler: function(form) {
     //$(form).submit();
-    $.fancybox.open({href : '#complete'});
+    //$.fancybox.open({href : '#complete'});
   },
   rules: {
     name: {

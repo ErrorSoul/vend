@@ -6,8 +6,11 @@ class MyApp < Sinatra::Base
 
   post '/' do
     content_type :json
-    if params[:name].size >= 3 && params[:phone].size > 1
-      { ara: params }.to_json
+    name, phone = params[:name], params[:phone]
+    if name.size >= 3 && phone.size > 1
+      email = Mailer.contact(name, phone)
+      email.deliver
+      { ok: 'ok' }.to_json
     else
       { error: 'error' }.to_json
     end
