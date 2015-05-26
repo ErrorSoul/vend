@@ -300,8 +300,8 @@ header:after {
   text-decoration: none;
 }
 .form_element {
-  display: block;
-  margin-right: 21px;
+  display: inline-flex;
+  //margin-right: 21px;
   float: left;
   position: relative;
 }
