@@ -79,8 +79,7 @@ a {
   color: #e78613 !important;
 }
 
-.f-red {
-  color: #e71313 !important;
+.f-red {  color: #e71313 !important;
 }
 
 .f-green {
@@ -304,6 +303,7 @@ header:after {
   //margin-right: 21px;
   float: left;
   position: relative;
+  margin-right: 1%;
 }
 
 .form_element:before,
@@ -647,7 +647,7 @@ section.takecons h2 a {
   text-decoration: none;
 }
 section.takecons .container {padding: 44px 0;}
-section.takecons .container form {max-width: 670px;margin: 0 auto;}
+section.takecons .container form {max-width: 690px;margin: 0 auto;}
 
 section.white_block h1 {
   font-family: 'pt_sans_narrowregular';
