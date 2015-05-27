@@ -64,7 +64,7 @@ jQuery.validator.setDefaults({
   },
   submitHandler: function(form) {
     //$(form).submit();
-    $.fancybox.open({href : '#complete'});
+    //$.fancybox.open({href : '#complete'});
   },
   rules: {
     name: {
@@ -116,4 +116,55 @@ jQuery.extend($.inputmask.defaults, {
       error.remove();
     })*/;
   }
+});
+
+
+$(function() {
+  helper = function(elem, name){
+      p_elem = elem.find(name).closest('.attr').find('p')
+      if (p_elem.length > 0) {
+	  p_elem.html('<p> Неправильные данные </p>')
+      } else {
+	  elem.find(name).closest('.attr').append('<p> Неправильные данные </p>')
+      }
+  }
+  form_helper = function(elem) {
+      $(elem).submit(function(e){
+	  e.preventDefault();
+	  $form = $(this);
+	  console.log($form, 'form')
+	  $name = $form.find('#name')
+	  $phone = $form.find('#phone')
+
+	  if ($name.closest('.form_element').hasClass('has-error')   ||
+              $phone.closest('.form_element').hasClass('has-error')) {
+	      helper($(this), '#name')
+	  }
+	  else {
+            $.ajax({
+		  type: "POST",
+		  url: "/",
+		  data: $form.serialize(),
+		  success: function(data){
+		      console.log(data, "ok");
+		      if (data['error']){
+			  $name.closest('.form-element').addClass('has-error')
+			  $phone.closest('.form-element').addClass('has-error')
+			  helper($(this), "#name");
+		      } else {
+			  $name.val('')
+			  $phone.val('')
+			  $name.closest('.attr').find('p').html('')
+			  $.fancybox.open({href : '#complete'});
+		      }
+		  },
+		  error: function(){
+		      $("#message").html("Not Successful")
+		  }
+	      });
+	  }
+      });
+  }
+   form_helper("form#presentationForm");
+   form_helper("form#presentationForm2");
 });

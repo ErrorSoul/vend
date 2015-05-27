@@ -1,0 +1,195 @@
+doctype html
+/![if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7"
+/![if IE 7] <html class="no-js lt-ie9 lt-ie8"
+/![if IE 8] <html class="no-js lt-ie9"
+/! [if gt IE 8]><!
+html.no-js
+  /! <![endif]
+  head
+    meta content=("text/html; charset=utf-8") http-equiv="Content-Type" /
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /
+    title ВНЕШЭКОНОМСТРАХ - страхование ответственности застройщика на выгодных условиях!
+    meta content="" name="description" /
+    meta content="" name="keywords" /
+    meta content="width=1200" name="viewport" /
+    link href="js/vendor/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" type="text/css" /
+    link href="css/normalize.min.css" rel="stylesheet" /
+    link href="css/style.css" rel="stylesheet" /
+    script src="js/vendor/modernizr.js"
+    script src="http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript" 
+  body
+    /![if lt IE 7]
+      | <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+      | your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+      | improve your experience.</p
+    .wrapper
+      .maincontent
+        header
+          .p_block
+            .container
+              a.logo href="/"
+                img alt="Внешэкономстрах" src="img/logo/logo.png" /
+              a.takecall href="#eqeue"  Заказать звонок
+              a.phone href="tel:+74996496402"  8(499)649-64-02
+        section.common.topsection
+          .outta_image.load_me_im data-bg="img/bg/top.jpg"
+          .p_block
+            .container
+              .main_about.white_chamber
+                h1 Страхование ответственности застройщика по самым низким тарифами!
+                .after_title.clearfix
+                  h2
+                    | Убедитесь в этом — закажите &nbsp
+                    strong бесплатную
+                    | &nbsp консультацию и расчет тарифа!
+        section.common.takecons
+          .p_block
+            .container
+              form#presentationForm.tac.col-container action="/" method="POST"
+                .form_element
+                  .attr
+                    input name="name" id="name" placeholder=("Ваше имя") type="text" /
+                .form_element
+                  .attr
+                    input name="phone" id="phone" placeholder=("Ваш телефон") type="text" /
+                .form_element
+                  .attr
+                    button.button type="submit"  Заказать консультацию
+        section.common.white_block
+          .p_block
+            .container.pad-top-biggest.col-container
+              h1
+                span.line
+                | Частые проблемы,
+                br/
+                | с которыми сталкиваются
+                br/
+                | застройщики
+                br/
+              .cifers.clearfix
+                ul.cifers_list
+                  li
+                    .num
+                      img src="img/ico/battery.png" /
+                    .descr Отсутствие уверенности в страховщике
+                  li
+                    .num
+                      img src="img/ico/coins.png" /
+                    .descr Высокие страховые тарифы
+                  li
+                    .num
+                      img src="img/ico/clock.png" /
+                    .descr Долгое рассмотрение заявки
+        section.common.garant
+          .outta_image.load_me_im data-bg="img/bg/center.jpg"
+          .p_block
+            .container.padder.tac
+              h1
+                | Мы решаем их каждый день! Мы гарантируем,
+                br/
+                | что у нас
+              .after_title.clearfix
+                .cifers.fn
+                  ul.cifers_list
+                    li
+                      .num
+                        img src="img/ico/lock.png" /
+                      .title Надежно
+                      .descr Копания внешэкономстрах работает с 1993го года и уже успела зарекомендовать себя
+                    li
+                      .num
+                        img src="img/ico/tarifs.png" /
+                      .title Низкие тарифы
+                      .descr Наше гибкое тарифообразование позволяет подобрать для вас оптимальный тариф
+                    li
+                      .num
+                        img src="img/ico/fast.png" /
+                      .title Быстро
+                      .descr Оперативное рассмотрениезаявки менее, чем за 1 час
+                    li
+                      .num
+                        img src="img/ico/pointer.png" /
+                      .title Без границ
+                      .descr Мы страхуем объекты по всей Российской Федерации
+        section.common.goodwork
+          .outta_image.load_me_im data-bg="img/bg/bottom.jpg"
+          .p_block
+            .container.padder.tac
+              h1 Мы гордимся cвоей работой!
+              .clearfix
+                .cifers.fn
+                  ul.cifers_list.pad-top-biggest
+                    li
+                      .num 32000
+                      .title
+                        | довольных
+                        br>/
+                        | клиентов
+                    li
+                      .num 16
+                      .title
+                        | лет на рынке
+                        br>/
+                        | страхования
+                    li
+                      .num
+                        | 200 М.
+                        span.rub i
+                      .title
+                        | Среднегодовые
+                        br>/
+                        | страховые выплаты
+        section.common.white_block.partners
+          .p_block
+            .container.padder.col-container
+              h1
+                span.line
+                | Наши партнеры
+                br/
+                | по перестрахованию
+              .cifers
+                ul.cifers_list
+                  li
+                    img src="img/logo/kapital.png" /
+                  li
+                    img src="img/logo/vsk.png" /
+                  li
+                    img src="img/logo/unity.png" /
+        #complete style="display:none;"
+          section.modal.tac
+            h1.tac Заявка отправлена!
+            .text
+              | Вы успешно отправили заявку на консультацию и расчет тарифа,
+              br/
+              | мы свяжемся с вами по указанным координатам в ближайшее время!
+            a.button href="javascript:$.fancybox.close();"  Закрыть
+        section class="common takecons"
+          a name="eqeue"
+          .p_block
+            .container
+              h1 Оставьте заявку на консультацию и расчет тарифа!
+              .after_title
+                form#presentationForm2.tac.col-container method="POST" action="/"
+                  .form_element
+                    .attr
+                      input name="name" id="name" placeholder=("Ваше имя") type="text" /
+                  .form_element
+                    .attr
+                      input name="phone" id="phone" placeholder=("Ваш телефон") type="text" /
+                  .form_element.submit
+                    .attr
+                      button.button type="submit"  Заказать консультацию
+              h2
+                | Или позвоните нам
+
+                a href="tel:+74996496402"  8(499)649-64-02
+        section#map.common.map
+    script src="js/vendor/jquery-1.11.0.min.js"
+    script src="js/plugins.js"
+    script src="js/vendor/jquery.fancybox.pack.js?v=2.1.5"
+    script src="js/jquery.validate.min.js"
+    script src="js/jquery.validate.additional-methods.min.js"
+    script src="js/jquery.validate.messages_ru.min.js"
+    script src="js/jquery.inputmask.js" type="text/javascript"
+    script src="js/jquery.inputmask.phone.extensions.js" type="text/javascript"
+    script src="js/main.js"
